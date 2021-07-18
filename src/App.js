@@ -8,19 +8,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import ContactSection from './components/app1/content/ContactSection'
 // import AboutSection from './components/app1/content/AboutSection'
 
-import Comp2 from './components/test1/Comp2'
+// import Comp2 from './components/test1/Comp2'
+import Nav from './components/router_test/nav/Nav'
+import Slide from './components/router_test/nav/Slide';
+import Footer from './components/router_test/nav/Footer';
 
 
 function App() {
   return (
-    <div className="container">
-      <div className="row">
-        <Comp2/>
-        <Comp2/>
-        <Comp2/>
-        <Comp2/>
-        <Comp2/>
-      </div>
+    <div>
+      <Nav/>
+      <Slide/>
+      <Footer/>
     </div>
   );
 }
