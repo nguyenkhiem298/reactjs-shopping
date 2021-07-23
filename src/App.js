@@ -12,15 +12,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from './components/router_test/nav/Nav'
 import Slide from './components/router_test/nav/Slide';
 import Footer from './components/router_test/nav/Footer';
+import ProductDetail from './components/router_test/nav/ProductDetail';
+import Products from './components/router_test/products/Products';
+import { BrowserRouter as Router} from "react-router-dom";
+import RouterApp from './components/router_test/router/RouterApp';
+
 
 
 function App() {
   return (
-    <div>
-      <Nav/>
-      <Slide/>
-      <Footer/>
-    </div>
+    <Router>
+      <RouterApp/>
+    </Router>
   );
 }
 

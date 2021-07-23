@@ -1,4 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams
+} from "react-router-dom";
 
 export default class Nav extends Component {
     render() {
@@ -12,7 +19,7 @@ export default class Nav extends Component {
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">Router1</a>
+                    <Link className="nav-link active" aria-current="page" to="/router1">Router1</Link>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="#">Router2</a>
