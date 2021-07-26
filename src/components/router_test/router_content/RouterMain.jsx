@@ -9,7 +9,6 @@ export default class RouterMain extends Component {
             <>
                 <Nav/>
                 <Slide/>
-
                 <Footer/>
             </>
         )

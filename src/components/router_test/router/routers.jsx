@@ -1,19 +1,30 @@
+import ProductDetail from '../products/ProductDetail';
+import Products from '../products/Products';
+import DefaultLayout from '../router_content/DefaultLayout';
+import Router1 from '../router_content/Router1';
+import Router2 from '../router_content/Router2';
 
-export default routers = [
+// eslint-disable-next-line import/no-anonymous-default-export
+export default [
     {
         path: "/",
         exact: true,
-        sidebar: () => <div>home!</div>,
-        main: () => <h2>Home</h2>
+        layout: DefaultLayout,
+        component: Products
       },
       {
-        path: "/bubblegum",
-        sidebar: () => <div>bubblegum!</div>,
-        main: () => <h2>Bubblegum</h2>
+        path: "/router1",
+        layout: DefaultLayout,
+        component: Router1
       },
       {
-        path: "/shoelaces",
-        sidebar: () => <div>shoelaces!</div>,
-        main: () => <h2>Shoelaces</h2>
-      }
-]
+        path: "/router2",
+        layout: DefaultLayout,
+        component: Router2
+      },
+      {
+        path: "/product-detail",
+        layout: DefaultLayout,
+        component: ProductDetail
+      },
+];

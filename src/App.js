@@ -9,21 +9,36 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import AboutSection from './components/app1/content/AboutSection'
 
 // import Comp2 from './components/test1/Comp2'
-import Nav from './components/router_test/nav/Nav'
-import Slide from './components/router_test/nav/Slide';
-import Footer from './components/router_test/nav/Footer';
-import ProductDetail from './components/router_test/nav/ProductDetail';
-import Products from './components/router_test/products/Products';
-import { BrowserRouter as Router} from "react-router-dom";
-import RouterApp from './components/router_test/router/RouterApp';
+import { BrowserRouter as Router,
+  Switch,
+  Route} from "react-router-dom";
+import routers from './components/router_test/router/routers';
+import Nav from './components/router_test/nav/Nav';
 
 
 
 function App() {
   return (
-    <Router>
-      <RouterApp/>
-    </Router>
+      <Router>
+        <Switch>
+          {
+            routers.map( (item, index) => (
+              <Route
+                key={index}
+                path={item.path}
+                exact={item.exact}
+                component= {(props) => {
+                  return (
+                    <item.layout {...props}>
+                      <item.component {...props}/>
+                    </item.layout>
+                  )
+                }}
+                />
+              ))
+          }
+        </Switch>
+      </Router>
   );
 }
 

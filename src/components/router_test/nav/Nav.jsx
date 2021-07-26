@@ -1,34 +1,42 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
   Link,
-  useParams
 } from "react-router-dom";
+import './styleNav.css'
 
 export default class Nav extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-              <a className="navbar-brand" href="#">RouterMain</a>
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon" />
-              </button>
-              <div className="collapse navbar-collapse" id="navbarNav">
+              <Link className="navbar-brand" to="/">KiotViet</Link>
+              <div className="collapse navbar-collapse main-menu" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to="/router1">Router1</Link>
+                    <Link className="nav-link active" aria-current="page" to="/router1">Tổng Quan</Link>
+                    <div className="sub-nav-1">
+                      <ul>
+                        <li><Link to="/router1">Danh Mục</Link></li>
+                        <li><Link to="/">Thiết Lập Giá</Link></li>
+                        <li><Link to="/">Kiểm Kho</Link></li>
+                      </ul>
+                    </div>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Router2</a>
+                    <Link className="nav-link" to="/router2">Hàng Hóa</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Router3</a>
+                    <Link className="nav-link" to="/">Giao Dịch</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">About</a>
+                    <Link className="nav-link" to="/">Đối Tác</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/">Nhân Viên</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link disabled" to="/" tabIndex={-1} aria-disabled="true">About</Link>
                   </li>
                 </ul>
               </div>
