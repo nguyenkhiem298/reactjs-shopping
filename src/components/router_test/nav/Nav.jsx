@@ -17,7 +17,7 @@ export default class Nav extends Component {
                     <Link className="nav-link active" aria-current="page" to="/router1">Tổng Quan</Link>
                     <div className="sub-nav-1">
                       <ul>
-                        <li><Link to="/router1">Danh Mục</Link></li>
+                        <li><Link to="/danh-muc">Danh Mục</Link></li>
                         <li><Link to="/">Thiết Lập Giá</Link></li>
                         <li><Link to="/">Kiểm Kho</Link></li>
                       </ul>

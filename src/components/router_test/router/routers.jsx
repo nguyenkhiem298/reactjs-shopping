@@ -1,3 +1,4 @@
+import DefaultDM from '../dashboard/hang_hoa/danh_muc/DefaultDM';
 import ProductDetail from '../products/ProductDetail';
 import Products from '../products/Products';
 import DefaultLayout from '../router_content/DefaultLayout';
@@ -23,8 +24,8 @@ export default [
         component: Router2
       },
       {
-        path: "/product-detail",
+        path: "/danh-muc",
         layout: DefaultLayout,
-        component: ProductDetail
+        component: DefaultDM
       },
 ];
